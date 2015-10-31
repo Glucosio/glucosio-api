@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace GlucosioAPI\Http\Controllers;
 
-use App\Readingtype;
+use GlucosioAPI\Readingtype;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Reading as Reading;
+use GlucosioAPI\Http\Requests;
+use GlucosioAPI\Http\Controllers\Controller;
+use GlucosioAPI\Reading as Reading;
 
 class ReadingsController extends Controller
 {

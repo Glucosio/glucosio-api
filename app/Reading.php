@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace GlucosioAPI;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,11 +10,11 @@ class Reading extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('GlucosioAPI\User');
     }
 
     public function readingtype()
     {
-        return $this->belongsTo('App\Readingtype');
+        return $this->belongsTo('GlucosioAPI\Readingtype');
     }
 }

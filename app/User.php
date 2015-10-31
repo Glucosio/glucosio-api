@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace GlucosioAPI;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -39,6 +39,6 @@ class User extends Model implements AuthenticatableContract,
 
     public function readings()
     {
-        return $this->hasMany('App\Reading');
+        return $this->hasMany('GlucosioAPI\Reading');
     }
 }

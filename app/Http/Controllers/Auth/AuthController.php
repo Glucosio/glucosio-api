@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace GlucosioAPI\Http\Controllers\Auth;
 
-use App\User;
+use GlucosioAPI\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use GlucosioAPI\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
