@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace GlucosioAPI\Jobs;
 
 use Illuminate\Bus\Queueable;
 

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace GlucosioAPI\Http\Controllers;
 
+use GlucosioAPI\Readingtype;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use GlucosioAPI\Http\Requests;
+use GlucosioAPI\Http\Controllers\Controller;
 
 class ReadingtypesController extends Controller
 {
@@ -16,6 +17,7 @@ class ReadingtypesController extends Controller
      */
     public function index()
     {
+        return Readingtype::all();
     }
 
     /**

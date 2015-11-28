@@ -12,9 +12,11 @@
 */
 
 
-
-Route::resource('users', 'UsersController');
-Route::resource('readings', 'ReadingsController');
+Route::group(['prefix' => 'v1'], function () {
+  Route::resource('users', 'UsersController');
+  Route::resource('readings', 'ReadingsController');
+  Route::resource('readingtypes', 'ReadingtypesController');
+});
 
 Route::get('/', function () {
 

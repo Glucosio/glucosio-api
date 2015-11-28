@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace GlucosioAPI\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

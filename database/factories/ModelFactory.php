@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(GlucosioAPI\User::class, function (Faker\Generator $faker) {
     return [
         'date_of_birth' => $faker->date(),
         'gender_id' => rand(0,2),
@@ -19,7 +19,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Reading::class, function (Faker\Generator $faker) {
+$factory->define(GlucosioAPI\Reading::class, function (Faker\Generator $faker) {
     return [
         'user_id' => rand(1,500),
         'value' => rand(40,600),
@@ -28,7 +28,7 @@ $factory->define(App\Reading::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Readingtype::class, function (Faker\Generator $faker) {
+$factory->define(GlucosioAPI\Readingtype::class, function (Faker\Generator $faker) {
     return [
         'id' => rand(1,6),
         'type' => $faker->word()

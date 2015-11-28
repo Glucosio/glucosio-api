@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace GlucosioAPI\Http\Controllers;
 
-use App\Readingtype;
+use GlucosioAPI\Readingtype;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Reading as Reading;
+use GlucosioAPI\Http\Requests;
+use GlucosioAPI\Http\Controllers\Controller;
+use GlucosioAPI\Reading as Reading;
 
 class ReadingsController extends Controller
 {
@@ -33,7 +33,12 @@ class ReadingsController extends Controller
         $input = \Input::json();
         $reading = new Reading();
         $reading->value = $input->get('value');
-        $reading->readingtype_id = Readingtype::where('type',$input->get('readingtype'))->lists('id')->first();
+        if ($readingtype_id = Readingtype::where('type',$input->get('readingtype'))->lists('id')->first()) {
+            $reading->readingtype_id = $readingtype_id;
+        } else {
+            $reading->readingtype_id = 0;
+        }
+
         $reading->created_at = $input->get('created_at');
         $reading->user_id= $input->get('user_id');
         $reading->save();

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace GlucosioAPI\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\User as User;
+use GlucosioAPI\Http\Requests;
+use GlucosioAPI\Http\Controllers\Controller;
+use GlucosioAPI\User as User;
 
 class UsersController extends Controller
 {
