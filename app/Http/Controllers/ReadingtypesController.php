@@ -2,6 +2,7 @@
 
 namespace GlucosioAPI\Http\Controllers;
 
+use GlucosioAPI\Readingtype;
 use Illuminate\Http\Request;
 
 use GlucosioAPI\Http\Requests;
@@ -16,6 +17,7 @@ class ReadingtypesController extends Controller
      */
     public function index()
     {
+        return Readingtype::all();
     }
 
     /**
