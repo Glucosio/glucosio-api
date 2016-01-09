@@ -17,7 +17,7 @@ POST
   [
    {"value":70, "created_at": "2016-01-08:07:50:10", "user_id":123, "readingtype_id": 1},
    {"value":99, "created_at": "2016-01-08:09:45:03", "user_id":123, "readingtype_id": 2},
-   {"value":90, "created_at": "2016-01-08:12:05:38", "user_id":123, "readingtype_id": 3},
+   {"value":90, "created_at": "2016-01-08:12:05:38", "user_id":123, "readingtype_id": 3}
   ]
 }
 ````
