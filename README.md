@@ -5,9 +5,12 @@ Glucosio's API for Diabetes Research
 
 http://api.glucosio.org/v1/readings
 
+## method
+POST
 
 ## example JSON array
 
+(Content-Type: application/json)
 
 ````
 {"readings":
@@ -22,6 +25,7 @@ http://api.glucosio.org/v1/readings
 
 | id | reading type |
 |----|------------------|
+| 0  | other |
 | 1  | before breakfast |
 | 2	 |after breakfast |
 | 3	 |before lunch |
