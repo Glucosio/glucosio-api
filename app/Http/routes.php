@@ -18,6 +18,6 @@ Route::group(['prefix' => 'v1'], function () {
   Route::resource('readingtypes', 'ReadingtypesController');
 });
 
-Route::get('/', function () {
 
+Route::get('/', function () {
 });

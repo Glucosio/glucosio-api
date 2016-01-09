@@ -29,21 +29,25 @@ class ReadingsController extends Controller
      */
     public function store(Request $request)
     {
+	$input = \Input::json();
+        if (is_array($input->get('readings'))){
+            foreach ($input->get('readings') as $readingItem) {
+                $reading = new Reading();
+                $reading->value = $readingItem['value'];
+                if (isset($readingItem['readingtype_id'])) {
+                    $reading->readingtype_id = $readingItem['readingtype_id'];
+                } else {
+                    $reading->readingtype_id = 0;
+                }
 
-        $input = \Input::json();
-        $reading = new Reading();
-        $reading->value = $input->get('value');
-        if ($readingtype_id = Readingtype::where('type',$input->get('readingtype'))->lists('id')->first()) {
-            $reading->readingtype_id = $readingtype_id;
+                $reading->created_at = $readingItem['created_at'];
+                $reading->user_id= $readingItem['user_id'];
+                $reading->save();
+            }
+            return response('readings uploaded',201);
         } else {
-            $reading->readingtype_id = 0;
+            return response('readings must be an array');
         }
-
-        $reading->created_at = $input->get('created_at');
-        $reading->user_id= $input->get('user_id');
-        $reading->save();
-        return response($reading,201);
-
     }
 
     /**
@@ -53,7 +57,7 @@ class ReadingsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+   { 
         //
     }
 
