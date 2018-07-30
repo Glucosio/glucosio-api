@@ -1,4 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/Glucosio/glucosio-api/badges/gpa.svg)](https://codeclimate.com/github/Glucosio/glucosio-api)
+
+# Glucosio has moved to Gitlab! [Visit our project repos on Github](https://gitlab.com/glucosio)
+
 # glucosio-api
 Glucosio's API for Diabetes Research
 ## api endpoint
